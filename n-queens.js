@@ -18,19 +18,18 @@ var countNQueensSolutions = function (n) {
     }
   };
 
-
   var swap = function (array, i, start) {
     var tmp = array[i];
     array[i] = array[start];
     array[start] = tmp;
-  }
+  };
 
   var hasNoDiagonalConflicts = function (arr, upTo) {
     for (var i = 0; i < upTo; i++) {
       if (Math.abs(arr[i] - arr[upTo]) === upTo - i) { return false; }
     }
     return true;
-  }
+  };
 
   permute(arr, 0);
 
